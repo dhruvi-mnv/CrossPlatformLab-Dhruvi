@@ -4,7 +4,8 @@ name: Multi-OS Testing - Dhruvi
 
 on:
   push:
-    branches:[ "master" ]
+    branches:
+      - master
 
 jobs:
   test-ubuntu:

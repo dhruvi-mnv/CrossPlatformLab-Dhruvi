@@ -1,0 +1,44 @@
+## YAML Template.
+---
+name: Multi-OS Testing - Dhruvi
+
+on:
+  push:
+    branches:[ "master" ]
+
+jobs:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing on Ubuntu
+        run: echo "Testing on Ubuntu..."
+
+      - name: Display OS info (Ubuntu)
+        run: uname -a
+
+      - name: Create test file (Ubuntu)
+        run: echo "Ubuntu test by Dhruvi" > test-ubuntu.txt
+
+      - name: Display file contents (Ubuntu)
+        run: cat test-ubuntu.txt
+
+      - name: Ubuntu tests completed
+        run: echo "Ubuntu tests completed"
+
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Testing on Windows
+        run: echo "Testing on Windows..."
+
+      - name: Display OS info (Windows)
+        run: systeminfo
+
+      - name: Create test file (Windows)
+        run: echo "Windows test by Dhruvi" > test-windows.txt
+
+      - name: Display file contents (Windows)
+        run: type test-windows.txt
+
+      - name: Windows tests completed
+        run: echo "Windows tests completed"
